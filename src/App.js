@@ -1,5 +1,7 @@
+import Nav from "./components/Nav";
+
 function App() {
-  return <div>react store</div>;
+  return <Nav />;
 }
 
 export default App;
