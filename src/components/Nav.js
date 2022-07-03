@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 const Nav = () => {
   return (
@@ -11,7 +12,7 @@ const Nav = () => {
           <li>favorites</li>
         </List>
         <Cart>
-          <p>cart</p>
+          <MdOutlineShoppingCart />
           <Cartprice>$0</Cartprice>
         </Cart>
       </Navbar>
