@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-light: #bacdd9;
+  --color-dark: #4f698c;
+  --text-dark: #272727;
+  --text-light: #6d6d6d;
+}
+
+body {
+  color: var(--text-dark);
+}
+
+.bg-light {
+  background-color: var(--color-light);
+}
+
+.bg-dark {
+  background-color: var(--color-dark);
+}
+
+.text-light {
+  color: var(--text-light);
+}
+
+ul {
+  list-style: none;
+}
