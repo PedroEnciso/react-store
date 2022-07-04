@@ -5,7 +5,11 @@ import Categories from "./Categories";
 const UserControl = () => {
   return (
     <UserControlContainer>
-      <Categories />
+      <div className="flex align-center">
+        <Categories />
+        <div>filter</div>
+      </div>
+      <div>search</div>
     </UserControlContainer>
   );
 };
@@ -15,6 +19,9 @@ const UserControlContainer = styled.div`
   max-width: 900px;
   margin: 0 auto;
   padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export default UserControl;

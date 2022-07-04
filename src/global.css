@@ -61,3 +61,11 @@ select {
 .relative {
   position: relative;
 }
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
