@@ -11,8 +11,34 @@
   --text-light: #6d6d6d;
 }
 
+*:focus {
+  border: none;
+  border-radius: 10px;
+  outline: 3px solid rgb(0, 198, 248);
+}
+
 body {
   color: var(--text-dark);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+}
+
+a:hover {
+  border-bottom: 2px solid var(--text-dark);
+}
+
+ul {
+  list-style: none;
+}
+
+select {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--color-light);
+  border-radius: 10px;
 }
 
 .bg-light {
@@ -27,6 +53,11 @@ body {
   color: var(--text-light);
 }
 
-ul {
-  list-style: none;
+.cart-icon {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.relative {
+  position: relative;
 }

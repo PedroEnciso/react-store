@@ -3,16 +3,25 @@ import styled from "styled-components";
 import { MdOutlineShoppingCart } from "react-icons/md";
 
 const Nav = () => {
+  let cartCount = "0";
+
   return (
     <div className="bg-light">
       <Navbar>
         <Title>react store</Title>
         <List>
-          <li>home</li>
-          <li>favorites</li>
+          <li>
+            <a href="#">home</a>
+          </li>
+          <li>
+            <a href="#">favorites</a>
+          </li>
         </List>
         <Cart>
-          <MdOutlineShoppingCart />
+          <div className="relative">
+            <MdOutlineShoppingCart className="cart-icon" />
+            <Cartcount className="bg-light">{cartCount}</Cartcount>
+          </div>
           <Cartprice>$0</Cartprice>
         </Cart>
       </Navbar>
@@ -49,6 +58,20 @@ const Cart = styled.div`
 
 const Cartprice = styled.p`
   padding-left: 25px;
+`;
+
+const Cartcount = styled.div`
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(50%, -50%);
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #111;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 600;
 `;
 
 export default Nav;
