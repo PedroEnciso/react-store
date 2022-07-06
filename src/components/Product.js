@@ -12,10 +12,12 @@ const Product = ({ product }) => {
         <ImageContainer>
           <img src={product.image} alt={`photo of ${product.name}`} />
         </ImageContainer>
-        <Price className="bg-light">{product.price}</Price>
       </ProductTop>
-      <p>{product.title}</p>
-      <Category className="text-light">{product.category}</Category>
+      <ProductLabel>
+        <Title>{product.title}</Title>
+        <Price className="bg-light">{product.price}</Price>
+        <Category className="text-light">{product.category}</Category>
+      </ProductLabel>
       <ProductButton>add to cart</ProductButton>
     </ProductContainer>
   );
@@ -24,30 +26,47 @@ const Product = ({ product }) => {
 const ProductContainer = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100%;
 `;
 
 const ProductTop = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
   border-radius: 10px;
-  padding: 0.75rem 1rem 0rem;
-  margin-bottom: 1.25rem;
+  padding: 0.75rem 1rem 1.25rem;
+  overflow: hidden;
 `;
 
 const IconContainer = styled.div`
   width: fit-content;
-  align-self: flex-end;
+  align-self: end;
   font-size: 1.75rem;
 `;
 
 const ImageContainer = styled.div`
+  height: 20rem;
   padding: 1rem 0;
+`;
+
+const ProductLabel = styled.div`
+  display: grid;
+  grid-template-columns: 2fr, 1fr;
+  grid-gap: 1rem;
+`;
+
+const Title = styled.p`
+  grid-column: 1/2;
+  /* copied from google to keep the title from running in 2 lines */
+  width: 100%; /* the element needs a fixed width (in px, em, %, etc) */
+  overflow: hidden; /* make sure it hides the content that overflows */
+  white-space: nowrap; /* don't break the line */
+  text-overflow: ellipsis;
 `;
 
 const Price = styled.p`
   width: fit-content;
   padding: 0.25rem 0.25rem;
+  grid-column: 2/3;
 `;
 
 const Category = styled.p`
@@ -57,7 +76,7 @@ const Category = styled.p`
 const ProductButton = styled.button`
   margin: 1rem auto 0rem;
   padding: 0.5rem 0rem;
-  justify-self: end;
+  align-self: end;
   border-radius: 10px;
   width: 75%;
   letter-spacing: 1.25px;
