@@ -1,15 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import Product from "./Product";
 
 const ProductDisplay = ({ allProducts }) => {
   return (
     <DisplayContainer>
       {allProducts.map((product) => {
-        return (
-          <div key={product.id}>
-            {product.price} {product.title}
-          </div>
-        );
+        return <Product key={product.id} product={product} />;
       })}
     </DisplayContainer>
   );
@@ -20,8 +17,8 @@ const DisplayContainer = styled.div`
   max-width: 900px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
 `;
 
 export default ProductDisplay;
