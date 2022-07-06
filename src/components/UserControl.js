@@ -18,7 +18,6 @@ const UserControlContainer = styled.div`
   width: 85%;
   max-width: 900px;
   margin: 0 auto;
-  padding-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

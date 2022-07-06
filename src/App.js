@@ -1,20 +1,30 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import styled from "styled-components";
 import Nav from "./components/Nav";
 import UserControl from "./components/UserControl";
+import ProductDisplay from "./components/ProductDisplay";
 import productService from "./services/productService";
 
 function App() {
+  const [allProducts, setAllProducts] = useState([]);
   const getProducts = () => {
-    const products = productService.getProducts();
+    productService.getProducts().then((products) => setAllProducts(products));
   };
 
   useEffect(getProducts, []);
   return (
-    <div>
+    <ProjectContainer>
       <Nav />
       <UserControl />
-    </div>
+      <ProductDisplay allProducts={allProducts} />
+    </ProjectContainer>
   );
 }
+
+const ProjectContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
 
 export default App;
