@@ -16,9 +16,10 @@ const DisplayContainer = styled.div`
   width: 85%;
   max-width: 900px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 2rem;
+  justify-content: center;
 `;
 
 export default ProductDisplay;

@@ -6,10 +6,10 @@ const Nav = () => {
   let cartCount = "0";
 
   return (
-    <div className="bg-light">
+    <div className="bg-white">
       <Navbar>
-        <Title>react store</Title>
-        <List>
+        <Title className="text-xl">react store</Title>
+        <List className="text-sm">
           <li>
             <a href="#">home</a>
           </li>
@@ -20,9 +20,9 @@ const Nav = () => {
         <Cart>
           <div className="relative">
             <MdOutlineShoppingCart className="cart-icon" />
-            <Cartcount className="bg-light">{cartCount}</Cartcount>
+            <Cartcount className="text-sm">{cartCount}</Cartcount>
           </div>
-          <Cartprice>$0</Cartprice>
+          <Cartprice className="text-sm">$0</Cartprice>
         </Cart>
       </Navbar>
     </div>
@@ -41,7 +41,7 @@ const Navbar = styled.nav`
 
 const Title = styled.h1`
   letter-spacing: 3px;
-  font-size: 1.75rem;
+  font-weight: 700;
 `;
 
 const List = styled.ul`
@@ -70,8 +70,8 @@ const Cartcount = styled.div`
   width: 20px;
   border: 2px solid #111;
   border-radius: 50%;
-  font-size: 1rem;
   font-weight: 600;
+  background-color: #fff;
 `;
 
 export default Nav;

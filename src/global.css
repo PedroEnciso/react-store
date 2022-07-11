@@ -5,10 +5,11 @@
 }
 
 :root {
-  --color-light: #bacdd9;
-  --color-dark: #4f698c;
-  --text-dark: #272727;
-  --text-light: #6d6d6d;
+  --bg-light: #f8f8fa;
+  --color-light: rgba(77, 72, 175, 10%);
+  --color-dark: #645fc6;
+  --text-dark: #21212d;
+  --text-light: #2c2c38;
 }
 
 *:focus {
@@ -19,7 +20,11 @@
 
 body {
   color: var(--text-dark);
-  font-size: 1.15rem;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Libre Franklin", sans-serif;
+  /* background-color: var(--bg-light); */
+  color: var(--text-light);
 }
 
 a {
@@ -29,7 +34,7 @@ a {
 }
 
 a:hover {
-  border-bottom: 2px solid var(--text-dark);
+  border-bottom: 0.5px solid var(--text-dark);
 }
 
 ul {
@@ -57,8 +62,8 @@ select {
   border-radius: 10px;
 }
 
-.bg-light {
-  background-color: var(--color-light);
+.bg-white {
+  background-color: #fff;
 }
 
 .bg-dark {
@@ -77,9 +82,25 @@ select {
   border: 2px solid var(--color-dark);
 }
 
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-md {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
 .cart-icon {
   font-weight: 600;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .relative {
