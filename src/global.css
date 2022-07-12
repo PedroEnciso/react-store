@@ -23,7 +23,6 @@ body {
   font-size: 1rem;
   font-weight: 300;
   font-family: "Libre Franklin", sans-serif;
-  /* background-color: var(--bg-light); */
   color: var(--text-light);
 }
 
@@ -64,6 +63,10 @@ select {
 
 .bg-white {
   background-color: #fff;
+}
+
+.bg-gray {
+  background-color: var(--text-light);
 }
 
 .bg-dark {

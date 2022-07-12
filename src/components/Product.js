@@ -13,6 +13,7 @@ const Product = ({ product }) => {
           <img src={product.image} alt={`photo of ${product.name}`} />
         </ImageContainer>
       </ProductTop>
+      <Line className="bg-light" />
       <ProductLabel>
         <Title>{product.title}</Title>
         <Price className="text-sm">${product.price}</Price>
@@ -29,6 +30,9 @@ const ProductContainer = styled.div`
   border-radius: 10px;
   transition: box-shadow 0.4s;
   cursor: pointer;
+  padding: 1rem 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
 `;
 
 const ProductTop = styled.div`
@@ -50,10 +54,22 @@ const ImageContainer = styled.div`
   padding: 1rem 0;
 `;
 
+const Line = styled.hr`
+  border: 0;
+  height: 0.5px;
+`;
+
 const ProductLabel = styled.div``;
 
-const Title = styled.p``;
+const Title = styled.p`
+  line-height: 1.25;
+  font-weight: 600;
+  text-align: center;
+`;
 
-const Price = styled.p``;
+const Price = styled.p`
+  padding-top: 0.5rem;
+  text-align: center;
+`;
 
 export default Product;
