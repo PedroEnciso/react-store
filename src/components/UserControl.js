@@ -2,14 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import Categories from "./Categories";
 
-const UserControl = () => {
+const UserControl = ({ allProducts, setDisplayedProducts }) => {
   return (
     <UserControlContainer>
       <div className="flex align-center">
-        <Categories />
-        <div>filter</div>
+        <Categories
+          allProducts={allProducts}
+          setDisplayedProducts={setDisplayedProducts}
+        />
       </div>
-      <div>search</div>
     </UserControlContainer>
   );
 };

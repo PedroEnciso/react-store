@@ -7,16 +7,24 @@ import productService from "./services/productService";
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
+  const [displayedProucts, setDisplayedProducts] = useState([]);
   const getProducts = () => {
-    productService.getProducts().then((products) => setAllProducts(products));
+    productService.getProducts().then((products) => {
+      setAllProducts(products);
+      setDisplayedProducts(products);
+    });
   };
 
   useEffect(getProducts, []);
+
   return (
     <ProjectContainer>
       <Nav />
-      <UserControl />
-      <ProductDisplay allProducts={allProducts} />
+      <UserControl
+        allProducts={allProducts}
+        setDisplayedProducts={setDisplayedProducts}
+      />
+      <ProductDisplay allProducts={displayedProucts} />
     </ProjectContainer>
   );
 }
