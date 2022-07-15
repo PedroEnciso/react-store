@@ -15,7 +15,7 @@ The designs were created to the following widths:
 
 ### Secondary
 
-- Pale Purple: hsl(243, 42%, 48%, 10%)
+- Pale Purple: rgba(77, 72, 175, 10%)
 
 ### Neutral
 

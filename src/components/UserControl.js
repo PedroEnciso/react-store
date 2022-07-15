@@ -9,7 +9,7 @@ const UserControl = ({
 }) => {
   return (
     <UserControlContainer>
-      <div className="flex align-center">
+      <div className="flex width100 justify-center">
         <Categories
           allProducts={allProducts}
           setDisplayedProducts={setDisplayedProducts}

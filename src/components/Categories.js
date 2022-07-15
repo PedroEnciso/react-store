@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 import Category from "./Category";
 
 const Categories = ({ allProducts, setDisplayedProducts }) => {
@@ -63,12 +64,17 @@ const Categories = ({ allProducts, setDisplayedProducts }) => {
   };
 
   return (
-    <div>
+    <CategoryContainer>
       {categories.map((category) => (
         <Category name={category} onClick={handleNewCategory} key={category} />
       ))}
-    </div>
+    </CategoryContainer>
   );
 };
+
+const CategoryContainer = styled.div`
+  width: fit-content;
+  display: flex;
+`;
 
 export default Categories;

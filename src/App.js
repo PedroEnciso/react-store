@@ -8,6 +8,7 @@ import productService from "./services/productService";
 function App() {
   const [allProducts, setAllProducts] = useState([]);
   const [displayedProucts, setDisplayedProducts] = useState([]);
+
   const getProducts = () => {
     productService.getProducts().then((products) => {
       setAllProducts(products);

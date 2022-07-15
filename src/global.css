@@ -8,6 +8,7 @@
   --bg-light: #f8f8fa;
   --color-light: rgba(77, 72, 175, 10%);
   --color-dark: #645fc6;
+  --color-dark-opaque: rgba(77, 72, 175, 0.1);
   --text-dark: #21212d;
   --text-light: #2c2c38;
 }
@@ -73,6 +74,10 @@ select {
   background-color: var(--color-dark);
 }
 
+.bg-light-accent {
+  background-color: var(--color-dark-opaque);
+}
+
 .text-light {
   color: var(--text-light);
 }
@@ -116,4 +121,17 @@ select {
 
 .align-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.button-active {
+  background-color: var(--color-dark);
+  color: var(--bg-light);
 }
