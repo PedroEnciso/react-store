@@ -23,6 +23,7 @@ function App() {
       <UserControl
         allProducts={allProducts}
         setDisplayedProducts={setDisplayedProducts}
+        displayedProucts={displayedProucts}
       />
       <ProductDisplay allProducts={displayedProucts} />
     </ProjectContainer>

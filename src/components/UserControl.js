@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Categories from "./Categories";
 
-const UserControl = ({ allProducts, setDisplayedProducts }) => {
+const UserControl = ({
+  allProducts,
+  setDisplayedProducts,
+  displayedProucts,
+}) => {
   return (
     <UserControlContainer>
       <div className="flex align-center">
