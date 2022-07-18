@@ -66,7 +66,12 @@ const Categories = ({ allProducts, setDisplayedProducts }) => {
   return (
     <CategoryContainer>
       {categories.map((category) => (
-        <Category name={category} onClick={handleNewCategory} key={category} />
+        <Category
+          style={categoryFilter.includes(category) ? "active" : "inactive"}
+          name={category}
+          onClick={handleNewCategory}
+          key={category}
+        />
       ))}
     </CategoryContainer>
   );

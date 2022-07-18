@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import ProductControl from "./components/ProductControl";
+import Nav from "./components/Nav";
+import UserControl from "./components/UserControl";
+import ProductDisplay from "./components/ProductDisplay";
 import productService from "./services/productService";
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
+  const [displayedProducts, setDisplayedProducts] = useState([]);
 
   const getProducts = () => {
     productService.getProducts().then((products) => {
@@ -14,9 +17,19 @@ function App() {
 
   useEffect(getProducts, []);
 
+  useEffect(() => {
+    setDisplayedProducts(allProducts);
+  }, [allProducts]);
+
   return (
     <ProjectContainer>
-      <ProductControl allProducts={allProducts} />
+      <Nav />
+      <UserControl
+        allProducts={allProducts}
+        setDisplayedProducts={setDisplayedProducts}
+        displayedProucts={displayedProducts}
+      />
+      <ProductDisplay allProducts={displayedProducts} />
     </ProjectContainer>
   );
 }

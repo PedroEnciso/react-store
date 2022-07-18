@@ -131,7 +131,22 @@ select {
   width: 100%;
 }
 
-.button-active {
+.active {
+  background-color: var(--color-dark);
+  color: var(--bg-light);
+}
+
+.active:hover {
+  background-color: var(--bg-light);
+  color: var(--color-dark);
+}
+
+.inactive {
+  background-color: var(--bg-light);
+  color: var(--color-dark);
+}
+
+.inactive:hover {
   background-color: var(--color-dark);
   color: var(--bg-light);
 }
