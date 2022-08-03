@@ -16,7 +16,10 @@ const UserControl = ({
           setDisplayedProducts={setDisplayedProducts}
         />
       </div>
-      <Sort />
+      <Sort
+        allProducts={allProducts}
+        setDisplayedProducts={setDisplayedProducts}
+      />
     </UserControlContainer>
   );
 };
