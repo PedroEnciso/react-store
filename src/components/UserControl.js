@@ -3,23 +3,17 @@ import styled from "styled-components";
 import Categories from "./Categories";
 import Sort from "./Sort";
 
-const UserControl = ({
-  allProducts,
-  setDisplayedProducts,
-  displayedProucts,
-}) => {
+const UserControl = ({ allProducts, setAllProducts, filters, setFilters }) => {
   return (
     <UserControlContainer>
       <div className="flex width100 justify-center">
         <Categories
           allProducts={allProducts}
-          setDisplayedProducts={setDisplayedProducts}
+          filters={filters}
+          setFilters={setFilters}
         />
       </div>
-      <Sort
-        allProducts={allProducts}
-        setDisplayedProducts={setDisplayedProducts}
-      />
+      <Sort allProducts={allProducts} setAllProducts={setAllProducts} />
     </UserControlContainer>
   );
 };

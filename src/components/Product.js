@@ -10,13 +10,14 @@ const Product = ({ product }) => {
           <MdFavoriteBorder className="text-dark-accent" />
         </IconContainer>
         <ImageContainer>
-          <img src={product.image} alt={`photo of ${product.name}`} />
+          <img src={product.image} alt={`${product.name}`} />
         </ImageContainer>
       </ProductTop>
       <Line className="bg-light" />
       <ProductLabel>
         <Title>{product.title}</Title>
         <Price className="text-sm">${product.price}</Price>
+        <p>{product.rating.rate}</p>
       </ProductLabel>
     </ProductContainer>
   );
