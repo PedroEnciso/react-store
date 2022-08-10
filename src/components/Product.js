@@ -17,7 +17,6 @@ const Product = ({ product }) => {
       <ProductLabel>
         <Title>{product.title}</Title>
         <Price className="text-sm">${product.price}</Price>
-        <p>{product.rating.rate}</p>
       </ProductLabel>
     </ProductContainer>
   );
