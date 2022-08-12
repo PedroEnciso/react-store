@@ -150,3 +150,14 @@ select {
   background-color: var(--color-dark);
   color: var(--bg-light);
 }
+
+/***** styles for Message *****/
+.success {
+  background-color: #dcfce7;
+  color: #065f46;
+}
+
+.error {
+  background-color: #ffe4e6;
+  color: #9f1239;
+}

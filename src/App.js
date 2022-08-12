@@ -4,6 +4,8 @@ import Nav from "./components/Nav";
 import Banner from "./components/Banner";
 import UserControl from "./components/UserControl";
 import ProductDisplay from "./components/ProductDisplay";
+import Message from "./components/Message";
+
 import productService from "./services/productService";
 
 function App() {
@@ -41,6 +43,7 @@ function App() {
 
   return (
     <ProjectContainer>
+      <Message message={"hello from Message!"} theme={"success"} />
       <Nav cart={cart} />
       <Banner title="All products" />
       <UserControl
