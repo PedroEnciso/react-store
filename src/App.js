@@ -10,6 +10,7 @@ function App() {
   const [allProducts, setAllProducts] = useState([]);
   const [displayedProducts, setDisplayedProducts] = useState([]);
   const [filters, setFilters] = useState([]);
+  const [cart, setCart] = useState([]);
 
   const getProducts = () => {
     productService.getProducts().then((products) => {
@@ -40,7 +41,7 @@ function App() {
 
   return (
     <ProjectContainer>
-      <Nav />
+      <Nav cart={cart} setCart={setCart} />
       <Banner title="All products" />
       <UserControl
         allProducts={allProducts}

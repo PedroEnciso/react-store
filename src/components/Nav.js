@@ -1,9 +1,23 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { MdOutlineShoppingCart } from "react-icons/md";
 
-const Nav = () => {
-  let cartCount = "0";
+const Nav = ({ cart, setCart }) => {
+  const [cartTotal, setCartTotal] = useState(0);
+
+  const getCartTotal = () => {
+    if (cart.length > 0) {
+      const initialValue = 0;
+      console.log(cart);
+      let total = cart.reduce(
+        (prev, current) => prev + parseFloat(current.price),
+        initialValue
+      );
+      setCartTotal(total);
+    }
+  };
+
+  useEffect(getCartTotal, [cart]);
 
   return (
     <div className="bg-white">
@@ -16,13 +30,16 @@ const Nav = () => {
           <li>
             <a href="#">favorites</a>
           </li>
+          <li>
+            <button>add to cart</button>
+          </li>
         </List>
         <Cart>
           <div className="relative">
             <MdOutlineShoppingCart className="cart-icon" />
-            <Cartcount className="text-sm">{cartCount}</Cartcount>
+            <Cartcount className="text-sm">{cart.length}</Cartcount>
           </div>
-          <Cartprice className="text-sm">$0</Cartprice>
+          <Cartprice className="text-sm">${cartTotal}</Cartprice>
         </Cart>
       </Navbar>
     </div>
