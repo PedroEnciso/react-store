@@ -2,11 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import Product from "./Product";
 
-const ProductDisplay = ({ allProducts }) => {
+const ProductDisplay = ({ allProducts, setCart, cart }) => {
   return (
     <DisplayContainer>
       {allProducts.map((product) => {
-        return <Product key={product.id} product={product} />;
+        return (
+          <Product
+            key={product.id}
+            product={product}
+            setCart={setCart}
+            cart={cart}
+          />
+        );
       })}
     </DisplayContainer>
   );

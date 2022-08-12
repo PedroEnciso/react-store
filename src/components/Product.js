@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { MdFavoriteBorder } from "react-icons/md";
 
-const Product = ({ product }) => {
+const Product = ({ product, setCart, cart }) => {
+  const addToCart = () => {
+    setCart([...cart, product]);
+  };
+
   return (
     <ProductContainer>
       <ProductTop>
@@ -17,6 +21,7 @@ const Product = ({ product }) => {
       <ProductLabel>
         <Title>{product.title}</Title>
         <Price className="text-sm">${product.price}</Price>
+        <button onClick={addToCart}>Add to cart</button>
       </ProductLabel>
     </ProductContainer>
   );

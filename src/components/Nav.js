@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { MdOutlineShoppingCart } from "react-icons/md";
 
-const Nav = ({ cart, setCart }) => {
+const Nav = ({ cart }) => {
   const [cartTotal, setCartTotal] = useState(0);
 
   const getCartTotal = () => {

@@ -41,7 +41,7 @@ function App() {
 
   return (
     <ProjectContainer>
-      <Nav cart={cart} setCart={setCart} />
+      <Nav cart={cart} />
       <Banner title="All products" />
       <UserControl
         allProducts={allProducts}
@@ -49,7 +49,11 @@ function App() {
         filters={filters}
         setFilters={setFilters}
       />
-      <ProductDisplay allProducts={displayedProducts} />
+      <ProductDisplay
+        allProducts={displayedProducts}
+        setCart={setCart}
+        cart={cart}
+      />
     </ProjectContainer>
   );
 }
